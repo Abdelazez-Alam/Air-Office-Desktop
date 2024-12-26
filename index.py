@@ -119,7 +119,8 @@ class Mainapp(Tk):
         self.btn_clear.place(x=500,y=330)
         
         # frame for search bar
-        Frame(self.root,width=670,height=150,bg='silver').place(x=0,y=410)
+        fr_search = Frame(self.root,width=670,height=150,bg='silver')
+        fr_search.place(x=0,y=410)
         
         # search entry
         self.ent_search = Entry(self.root,width=20,justify='center',textvariable=self.ver_search,font=('Arial',15))
