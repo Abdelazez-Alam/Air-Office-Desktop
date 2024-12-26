@@ -52,8 +52,9 @@ class Mainapp(Tk):
         
         
         # frame for user data bar
-        Frame(self.root,width=670,height=130,bg='silver').place(x=0,y=0)
-        Label(self.root,width= 15,text='Customer Data',font=('Arial',16,'bold')).place(x=220,y=15)
+        fr_user = Frame(self.root,width=670,height=130,bg='silver')
+        fr_user.place(x=0,y=0)
+        Label(fr_user,width= 15,text='Customer Data',font=('Arial',16,'bold')).place(x=230,y=0)
         Label(self.root,width= 10,text='User ID',font=('Arial',13)).place(x=30,y=60)
         Label(self.root,width= 10,text='Name',font=('Arial',13)).place(x=150,y=60)
         Label(self.root,width= 10,text='Phone',font=('Arial',13)).place(x=280,y=60)
@@ -78,8 +79,9 @@ class Mainapp(Tk):
         
         
         # frame for ticket data bar
-        Frame(self.root,width=670,height=130,bg='gray').place(x=0,y=160)
-        Label(self.root,width= 15,text='Ticket data',font=('Arial',16,'bold')).place(x=220,y=165)
+        fr_ticket = Frame(self.root,width=670,height=130,bg='gray')
+        fr_ticket.place(x=0,y=160)
+        Label(fr_ticket,width= 15,text='Ticket data',font=('Arial',16,'bold')).place(x=230,y=0)
         Label(self.root,width=10, text='Type of flight',font=('Arial',13)).place(x=30,y=210)
         Label(self.root,width=10, text='Travel date',font=('Arial',13)).place(x=150,y=210)
         Label(self.root,width=10, text='Travel from',font=('Arial',13)).place(x=280,y=210)
@@ -130,7 +132,7 @@ class Mainapp(Tk):
         self.btn_show_all.place(x=350,y=490)
         # combo box
         combo = ttk.Combobox(state="readonly",values=['Name','Travel date','User id'],font=('Arial',15),textvariable=self.ver_select)
-        combo.place(x=450,y=420,width=110)
+        combo.place(x=450,y=420,width=120)
         
         # frame for table
         self.fr = Frame(self.root,width=670,height=680,bg='red')
